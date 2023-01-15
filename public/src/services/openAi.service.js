@@ -8,12 +8,12 @@ const BASE_URL = process.env.NODE_ENV === 'production'
   ? '/api/'
   : '//localhost:3030/api/'
 
-async function aiQuery(txt) {
+async function aiQuery({question}) {
   try {
-    console.log('entered item', txt)
+    console.log('entered item', question)
     const response = await axios.get(BASE_URL + 'openAi', {
       params: {
-        txt: txt
+        txt: question, 
       }
     })
     console.log('response', response)

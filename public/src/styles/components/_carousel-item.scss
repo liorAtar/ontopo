@@ -39,10 +39,10 @@
 
         @include for-small-layout {
             font-size: 30px;
-            padding-right: 26px;
+            padding-right: 35px;
 
             &.d-rtl {
-                padding-left: 26px;
+                padding-left: 35px;
             }
         }
     }
