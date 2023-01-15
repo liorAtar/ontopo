@@ -1,0 +1,70 @@
+.recommendation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .recommendation-btn {
+        width: fit-content;
+        height: 46px;
+        background-color: #27a9e1;
+        border: none;
+        border-radius: 6px;
+        color: white;
+        padding: 0 15px;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin: 10px;
+
+        &:hover {
+            background-color: #2192c3;
+        }
+    }
+
+    ol {
+        counter-reset: li;
+        list-style: none;
+        padding: 0;
+        max-width: 90%;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+    }
+
+    ol li {
+        position: relative;
+        display: block;
+        padding: .4em .4em .4em 2em;
+        margin: .5em 0;
+        background: #e1ecf1;
+        color: #444;
+        text-decoration: none;
+        border-radius: .3em;
+        transition: .3s ease-out;
+    }
+
+    ol li:hover {
+        background: #E9E4E0;
+    }
+
+    ol li:hover:before {
+        transform: rotate(360deg);
+    }
+
+    ol li:before {
+        content: counter(li);
+        counter-increment: li;
+        position: absolute;
+        left: -1.3em;
+        top: 50%;
+        margin-top: -1.3em;
+        background: #97ddfb;
+        height: 2em;
+        width: 2em;
+        line-height: 2em;
+        border: .3em solid #fff;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 2em;
+        transition: all .3s ease-out;
+    }
+}
